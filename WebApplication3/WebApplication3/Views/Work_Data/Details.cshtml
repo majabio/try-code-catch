@@ -1,0 +1,42 @@
+﻿@model WebApplication3.Work_Data
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Work_Data</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Shift_Date_End)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shift_Date_End)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shift_Time_End)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shift_Time_End)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Worker.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<WebApplication3.Worker>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OIB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birth_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Home_Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile_Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Branches.EmergencyAmbulance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employees.Employment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender1.Gender_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaceOfLiving.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Work_Data.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OIB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birth_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Home_Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Branches.EmergencyAmbulance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employees.Employment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender1.Gender_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlaceOfLiving.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Work_Data.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
